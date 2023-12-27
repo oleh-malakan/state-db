@@ -1,2 +1,2 @@
 # Core-DB
-Embedded database core
+Embedded database

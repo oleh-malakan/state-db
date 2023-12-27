@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	entity, err := db.Open()
+	entity, err := db.Open("")
 	if err != nil {
 		log.Fatal(err)
 	}

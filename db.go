@@ -1,6 +1,6 @@
 package db
 
-func Open(path string) (*Entity, error) {
+func Open(filePath string) (*Entity, error) {
 	return &Entity{}, nil
 }
 

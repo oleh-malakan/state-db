@@ -6,6 +6,10 @@ func Open(filePath string) (*Entity, error) {
 
 type Entity struct{}
 
+func (e *Entity) Begin() (*Tx, error) {
+	return &Tx{}, nil
+}
+
 func (e *Entity) Next() (ok bool) {
 	return
 }
@@ -20,6 +24,24 @@ func (e *Entity) Close() error {
 
 func (e *Entity) Connect() (*Entity, error) {
 	return &Entity{}, nil
+}
+
+type Tx struct{}
+
+func (t *Tx) Next() (ok bool) {
+	return
+}
+
+func (t *Tx) Data(fieldName ...string) *Data {
+	return &Data{}
+}
+
+func (t *Tx) Commit() error {
+	return nil
+}
+
+func (t *Tx) Rollback() error {
+	return nil
 }
 
 type Data struct{}

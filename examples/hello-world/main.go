@@ -12,4 +12,14 @@ func main() {
 		log.Fatal(err)
 	}
 	defer entity.Close()
+
+	for entity.Next() {
+		var greeting string
+		err = entity.Data("greeting").Scan(&greeting)
+		if err != nil {
+			log.Print(err)
+
+			return
+		}
+	}
 }

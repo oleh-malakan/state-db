@@ -26,10 +26,6 @@ func (e *Entity) Last() (ok bool) {
 	return
 }
 
-func (e *Entity) Find( /**/ ) (ok bool) {
-	return
-}
-
 func (e *Entity) Data(fieldName ...string) *Data {
 	return &Data{}
 }
@@ -75,10 +71,6 @@ func (t *Tx) Prev() (ok bool) {
 }
 
 func (t *Tx) Last() (ok bool) {
-	return
-}
-
-func (t *Tx) Find( /**/ ) (ok bool) {
 	return
 }
 

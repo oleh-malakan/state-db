@@ -34,12 +34,12 @@ func (e *Entity) Data(fieldName ...string) *Data {
 	return &Data{}
 }
 
-// New entity
+// New entity, construct new fields
 func (e *Entity) New() {
 
 }
 
-// New entity, with clone fields
+// New entity, with clone fields and default values
 func (e *Entity) Clone(fieldName ...string) *Data {
 	return &Data{}
 }
@@ -86,12 +86,12 @@ func (t *Tx) Data(fieldName ...string) *Data {
 	return &Data{}
 }
 
-// New entity
+// New entity, construct new fields
 func (t *Tx) New() {
 
 }
 
-// New entity, with clone fields
+// New entity, with clone fields and default values
 func (t *Tx) Clone(fieldName ...string) *Data {
 	return &Data{}
 }

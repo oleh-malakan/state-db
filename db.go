@@ -18,7 +18,15 @@ func (e *Entity) Next() (ok bool) {
 	return
 }
 
+func (e *Entity) NextStep(step int) (ok bool) {
+	return
+}
+
 func (e *Entity) Prev() (ok bool) {
+	return
+}
+
+func (e *Entity) PrevStep(step int) (ok bool) {
 	return
 }
 
@@ -66,7 +74,15 @@ func (t *Tx) Next() (ok bool) {
 	return
 }
 
+func (t *Tx) NextStep(step int) (ok bool) {
+	return
+}
+
 func (t *Tx) Prev() (ok bool) {
+	return
+}
+
+func (t *Tx) PrevStep(step int) (ok bool) {
 	return
 }
 

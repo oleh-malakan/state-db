@@ -21,7 +21,5 @@ func main() {
 
 			return
 		}
-
-		entity.Clone("greeting").Update(greeting)
 	}
 }

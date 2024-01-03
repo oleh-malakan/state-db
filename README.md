@@ -1,2 +1,2 @@
-# Core-DB
+# State-DB
 Embedded database

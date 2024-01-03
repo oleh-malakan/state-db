@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
-	db "github.com/oleh-malakan/core-db"
+	"github.com/oleh-malakan/state-db"
 )
 
 func main() {
-	entity, err := db.Open("./hello-world.entity")
+	entity, err := state.Open("./hello-world.entity")
 	if err != nil {
 		log.Fatal(err)
 	}

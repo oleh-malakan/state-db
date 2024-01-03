@@ -1,4 +1,4 @@
-package db
+package state
 
 func Open(filePath string) (*Entity, error) {
 	return &Entity{}, nil

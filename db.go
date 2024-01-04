@@ -204,7 +204,7 @@ func (t *Template) Get(fieldName string) FieldType {
 	return nil
 }
 
-func (t *Template) List() []FieldType {
+func (t *Template) All() map[string]FieldType {
 	return nil
 }
 

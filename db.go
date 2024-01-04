@@ -1,4 +1,4 @@
-package state
+package db
 
 import (
 	"time"
@@ -59,6 +59,10 @@ func (e *Entity) Paste(clipboard ...Clipboard) error {
 }
 
 func (e *Entity) New(template *Template) error {
+	return nil
+}
+
+func (e *Entity) Apply(template *Template) error {
 	return nil
 }
 
@@ -132,6 +136,10 @@ func (t *Tx) New(template *Template) error {
 	return nil
 }
 
+func (t *Tx) Apply(template *Template) error {
+	return nil
+}
+
 func (t *Tx) Template() *Template {
 	return &Template{}
 }
@@ -187,3 +195,19 @@ func (b *Bookmarks) Delete(key string) {}
 type Clipboard struct{}
 
 type Template struct{}
+
+func (t *Template) Add(fieldName string, fieldType FieldType) error {
+	return nil
+}
+
+func (t *Template) Get(fieldName string) FieldType {
+	return nil
+}
+
+func (t *Template) List() []FieldType {
+	return nil
+}
+
+func (t *Template) Delete(fieldName string) error {
+	return nil
+}

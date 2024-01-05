@@ -7,7 +7,10 @@ import (
 )
 
 func main() {
-	entity, err := db.Open("./hello-world.entity")
+	state := db.MakeState()
+	defer state.Close()
+
+	entity, err := state.Open("./hello-world.entity")
 	if err != nil {
 		log.Fatal(err)
 	}

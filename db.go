@@ -4,8 +4,18 @@ import (
 	"time"
 )
 
-func Open(filePath string) (*Entity, error) {
+func MakeState() *State {
+	return &State{}
+}
+
+type State struct{}
+
+func (s *State) Open(filePath string) (*Entity, error) {
 	return &Entity{}, nil
+}
+
+func (s *State) Close() error {
+	return nil
 }
 
 type Entity struct{}

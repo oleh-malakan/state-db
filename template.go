@@ -22,6 +22,26 @@ func (t *Template) Delete(fieldName string) error {
 	return nil
 }
 
+func (t *Template) Equal(template *Template) (ok bool) {
+	return
+}
+
+type FieldTypeEntity struct{}
+
+func (f FieldTypeEntity) isFieldType() {}
+
+type FieldTypeLink struct{}
+
+func (f FieldTypeLink) isFieldType() {}
+
+type FieldTypeBookmarks struct{}
+
+func (f FieldTypeBookmarks) isFieldType() {}
+
+type FieldTypeTemplate struct{}
+
+func (f FieldTypeTemplate) isFieldType() {}
+
 type FieldTypeInt8 struct{}
 
 func (f FieldTypeInt8) isFieldType() {}

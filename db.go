@@ -152,6 +152,11 @@ func (t *Tx) Rollback() error {
 	return nil
 }
 
+type NullInt64 struct {
+	Int64 int64
+	Valid bool
+}
+
 type Data struct{}
 
 func (d *Data) Scan(dest ...any) error {
@@ -165,6 +170,7 @@ func (d *Data) Scan(dest ...any) error {
 			*v = Bookmarks{}
 		case *Template:
 			*v = Template{}
+		case *NullInt64:
 		}
 	}
 	return nil

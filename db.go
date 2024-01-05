@@ -219,3 +219,19 @@ func CopySlice(from *Link, to *Link) (Clipboard, error) {
 func DeleteSlice(from *Link, to *Link) error {
 	return nil
 }
+
+func Cut(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func Copy(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func Paste(link *Link, clipboard ...Clipboard) error {
+	return nil
+}
+
+func Delete(link *Link) error {
+	return nil
+}

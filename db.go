@@ -8,10 +8,6 @@ func Open(filePath string) (*Entity, error) {
 	return &Entity{}, nil
 }
 
-func Slice(from *Link, to *Link) (Clipboard, error) {
-	return nil, nil
-}
-
 type Entity struct{}
 
 func (e *Entity) First() (ok bool) {
@@ -59,6 +55,10 @@ func (e *Entity) Copy() Clipboard {
 }
 
 func (e *Entity) Paste(clipboard ...Clipboard) error {
+	return nil
+}
+
+func (e *Entity) Delete() error {
 	return nil
 }
 
@@ -136,6 +136,10 @@ func (t *Tx) Paste(clipboard ...Clipboard) error {
 	return nil
 }
 
+func (t *Tx) Delete() error {
+	return nil
+}
+
 func (t *Tx) New(template *Template) error {
 	return nil
 }
@@ -203,3 +207,15 @@ func (b *Bookmarks) Contains(key string) bool {
 func (b *Bookmarks) Delete(key string) {}
 
 type Clipboard interface{}
+
+func CutSlice(from *Link, to *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func CopySlice(from *Link, to *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func DeleteSlice(from *Link, to *Link) error {
+	return nil
+}

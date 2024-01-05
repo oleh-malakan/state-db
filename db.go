@@ -50,8 +50,24 @@ func (e *Entity) Cut() Clipboard {
 	return nil
 }
 
+func (e *Entity) CutFrom(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func (e *Entity) CutTo(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
 func (e *Entity) Copy() Clipboard {
 	return nil
+}
+
+func (e *Entity) CopyFrom(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func (e *Entity) CopyTo(link *Link) (Clipboard, error) {
+	return nil, nil
 }
 
 func (e *Entity) Paste(clipboard ...Clipboard) error {
@@ -59,6 +75,14 @@ func (e *Entity) Paste(clipboard ...Clipboard) error {
 }
 
 func (e *Entity) Delete() error {
+	return nil
+}
+
+func (e *Entity) DeleteFrom(link *Link) error {
+	return nil
+}
+
+func (e *Entity) DeleteTo(link *Link) error {
 	return nil
 }
 
@@ -128,8 +152,24 @@ func (t *Tx) Cut() Clipboard {
 	return nil
 }
 
+func (t *Tx) CutFrom(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func (t *Tx) CutTo(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
 func (t *Tx) Copy() Clipboard {
 	return nil
+}
+
+func (t *Tx) CopyFrom(link *Link) (Clipboard, error) {
+	return nil, nil
+}
+
+func (t *Tx) CopyTo(link *Link) (Clipboard, error) {
+	return nil, nil
 }
 
 func (t *Tx) Paste(clipboard ...Clipboard) error {
@@ -137,6 +177,14 @@ func (t *Tx) Paste(clipboard ...Clipboard) error {
 }
 
 func (t *Tx) Delete() error {
+	return nil
+}
+
+func (t *Tx) DeleteFrom(link *Link) error {
+	return nil
+}
+
+func (t *Tx) DeleteTo(link *Link) error {
 	return nil
 }
 
